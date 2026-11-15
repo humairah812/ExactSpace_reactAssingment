@@ -1,120 +1,106 @@
-# React Chat App
+# ExactSpace React Assignments
 
-A modern, fast, and responsive single-page team chat application built with React, Vite, and modern CSS3. Designed with a clean SaaS aesthetic inspired by tools like Linear and Slack.
+A monorepo containing two frontend React applications developed for the **ExactSpace Frontend / UI Developer Internship Assignment**:
 
----
-
-## 📸 Preview
-
-![React Chat App Screenshot](./docs/app-screenshot.png)
+1. [**Chat App**](./chat-app/README.md) – A modern, single-page team conversation chat interface.
+2. [**Photo Gallery**](./photo-gallery/README.md) – A high-performance photo stream with infinite scrolling and API integration.
 
 ---
 
-## 🚀 Live Demo & Getting Started
+## 📁 Repository Structure
 
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) (v16.0 or higher recommended)
-- `npm`, `yarn`, or `pnpm`
-
-### Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/humairah812/ExactSpace_reactAssingment.git
-   cd ExactSpace_reactAssingment
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Start the development server:**
-   ```bash
-   npm run dev
-   ```
-
-4. **Open in browser:**
-   Navigate to [http://localhost:3000](http://localhost:3000).
-
-### Production Build
-
-```bash
-# Build optimized production assets
-npm run build
-
-# Preview production build locally
-npm run preview
-```
-
----
-
-## ✨ Key Features
-
-- **Interactive Messaging:** Instant message sending with automatic smooth scrolling to the latest message.
-- **Dynamic Team Roster:** Messages are randomly attributed to active team members (`Alan`, `Bob`, `Carol`, `Dean`, `Elin`).
-- **Individual Likes:** Every message includes its own like counter with instant updates, multiple-click support, and an animated heart reaction.
-- **Smart @Mentions:** Type `@` anywhere in the message input to trigger an autocomplete dropdown of team members with keyboard navigation (`ArrowUp` / `ArrowDown` / `Enter`).
-- **Quick Reaction Emoji Picker:** Select from popular emojis to quickly insert them into messages.
-- **Distinct Avatars:** Custom pastel avatar colors and badges for each team member.
-- **Human-Readable Timestamps:** 12-hour formatted timestamps (`10:45 AM`) with full datetime tooltips.
-- **Empty State:** Clean placeholder screen when starting a new conversation.
-- **Responsive Layout:** Optimized for mobile, tablet, and desktop screens with full touch support.
-- **Keyboard Shortcuts:**
-  - `Enter`: Send message
-  - `Shift + Enter`: New line
-  - `Escape`: Close popups (emojis / mentions)
-
----
-
-## 🛠️ Technology Stack
-
-- **Framework:** [React 18](https://react.dev/)
-- **Build Tool:** [Vite](https://vitejs.dev/)
-- **Icons:** [Lucide React](https://lucide.dev/)
-- **Styling:** Vanilla CSS3 (Custom Properties, Flexbox, Grid, Keyframe Animations)
-- **Language:** Modern JavaScript (ES6+)
-
----
-
-## 📁 Project Structure
-
-```
-react-chat-app/
-├── docs/
-│   └── app-screenshot.png        # Application UI screenshot
-├── public/
-│   └── chat-icon.svg             # Application logo
-├── src/
-│   ├── components/
-│   │   ├── Header.jsx            # Header with online status & message count
-│   │   ├── ChatWindow.jsx        # Main chat controller & state manager
-│   │   ├── MessageList.jsx       # Scrollable message feed with empty state
-│   │   ├── MessageItem.jsx       # Message row with avatar, content & like button
-│   │   └── MessageInput.jsx      # Composer with auto-resizing, mentions & emojis
-│   │
-│   ├── data/
-│   │   └── users.js              # Team user profiles and avatar palettes
-│   │
-│   ├── App.jsx                   # Main layout container
-│   ├── App.css                   # Component styles & animations
-│   ├── index.css                 # Base resets, variables, and typography
-│   └── main.jsx                  # React application entry point
+```text
+ExactSpace_reactAssingment/
 │
-├── index.html                    # Root HTML document
-├── package.json                  # Dependencies and scripts
-└── vite.config.js                # Vite configuration
+├── chat-app/                     # Assignment 1: Chat Application
+│   ├── docs/                     # Screenshot previews
+│   ├── public/                   # Static assets & icons
+│   ├── src/                      # React source code & components
+│   │   ├── components/           # Header, ChatWindow, MessageList, MessageItem, MessageInput
+│   │   ├── data/                 # Team member data roster
+│   │   ├── App.jsx
+│   │   ├── App.css
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── .gitignore
+│   ├── index.html
+│   ├── package.json
+│   ├── vite.config.js
+│   └── README.md
+│
+├── photo-gallery/                # Assignment 2: Infinite Scroll Photo Gallery
+│   ├── public/                   # Static assets
+│   ├── src/                      # React source code & components
+│   │   ├── components/           # PhotoGallery, PhotoItem
+│   │   ├── App.jsx
+│   │   ├── App.css
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── .gitignore
+│   ├── index.html
+│   ├── package.json
+│   ├── vite.config.js
+│   └── README.md
+│
+├── .gitignore
+└── README.md
 ```
 
 ---
 
-## 🎨 Design System
+## 💬 1. Chat App
 
-- **Background:** `#F8FAFC`
-- **Card Surface:** `#FFFFFF`
-- **Primary Accent:** `#635BFF`
-- **Primary Text:** `#172033`
-- **Secondary Text:** `#64748B`
-- **Borders:** `#E8ECF2`
-- **Online Indicator:** `#10B981`
+A modern, fast, and responsive single-page team chat application designed with a clean SaaS aesthetic inspired by tools like Linear and Slack.
+
+### Key Features
+- **Message Sending:** Instant message submission with validation and automatic smooth scroll to the newest message.
+- **Random User Attribution:** Each message is randomly attributed to an active team member (`Alan`, `Bob`, `Carol`, `Dean`, `Elin`).
+- **Independent Like Counters:** Every message includes its own like button with real-time counters and animated heart reactions.
+- **Smart @Mentions:** Typing `@` opens an interactive team member autocomplete dropdown with keyboard navigation.
+- **Quick Emojis:** Quick reaction picker to seamlessly insert popular emojis.
+- **Distinct Avatars & Timestamps:** Color-coded pastel avatars per user and 12-hour formatted timestamps.
+- **Responsive Design:** Optimized across desktop, tablet, and mobile displays.
+
+### Technologies Used
+- React 18, Vite, Lucide React, Modern CSS3 (Flexbox, Grid, CSS Variables, Animations).
+
+👉 **[View Chat App Documentation & Setup](./chat-app/README.md)**
+
+---
+
+## 📷 2. Photo Gallery
+
+A single-page, responsive photo gallery with infinite scrolling powered by the Picsum Photos API.
+
+### Key Features
+- **Infinite Scrolling:** Automatically loads subsequent photo batches as the user scrolls using the native `IntersectionObserver` API.
+- **API Request Management:** Guards against concurrent duplicate requests and manages network latency efficiently.
+- **Independent Like Button:** Every photo includes an interactive like button and counter that updates independently.
+- **State Preservation:** Like counts and loaded images persist seamlessly across infinite scroll page additions.
+- **Error & Resilience Handling:** Gracefully handles API network errors with retry triggers, broken image placeholders, and an end-of-feed notification.
+- **Responsive Grid:** Clean, consistent aspect ratio cards tailored for all screen sizes.
+
+### Technologies Used
+- React 18, Vite, Picsum Photos API, `IntersectionObserver`, CSS3.
+
+👉 **[View Photo Gallery Documentation & Setup](./photo-gallery/README.md)**
+
+---
+
+## 🚀 Quick Start Guide
+
+Each application operates independently with its own configuration and dependencies.
+
+### Running the Chat App
+```bash
+cd chat-app
+npm install
+npm run dev
+```
+
+### Running the Photo Gallery
+```bash
+cd photo-gallery
+npm install
+npm run dev
+```
