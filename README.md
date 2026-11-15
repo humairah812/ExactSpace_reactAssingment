@@ -4,6 +4,12 @@ A modern, fast, and responsive single-page team chat application built with Reac
 
 ---
 
+## 📸 Preview
+
+![React Chat App Screenshot](./docs/app-screenshot.png)
+
+---
+
 ## 🚀 Live Demo & Getting Started
 
 ### Prerequisites
@@ -15,8 +21,8 @@ A modern, fast, and responsive single-page team chat application built with Reac
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/<humairah812>/react-chat-app.git
-   cd react-chat-app
+   git clone https://github.com/humairah812/ExactSpace_reactAssingment.git
+   cd ExactSpace_reactAssingment
    ```
 
 2. **Install dependencies:**
@@ -76,6 +82,8 @@ npm run preview
 
 ```
 react-chat-app/
+├── docs/
+│   └── app-screenshot.png        # Application UI screenshot
 ├── public/
 │   └── chat-icon.svg             # Application logo
 ├── src/
