@@ -15,7 +15,7 @@ A modern, fast, and responsive single-page team chat application built with Reac
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/<your-username>/react-chat-app.git
+   git clone https://github.com/<humairah812>/react-chat-app.git
    cd react-chat-app
    ```
 
